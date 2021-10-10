@@ -1,6 +1,8 @@
 # psp-profiler-prx
 Kernel module for debugging, returns profiling registers.
+
 Move profiler.prx and profilerLib.S to your project.
+
 In your project's Makefile include profilerLib.o to OBJS
 
 Example:
