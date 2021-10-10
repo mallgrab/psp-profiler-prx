@@ -1,6 +1,8 @@
 # psp-profiler-prx
 Kernel module for debugging, returns profiling registers.
 
+make && make profilerLib.S
+
 Move profiler.prx and profilerLib.S to your project.
 
 In your project's Makefile include profilerLib.o to OBJS
@@ -12,7 +14,7 @@ PspDebugProfilerRegs regs;
 int ret;
 int fd;
 
-modid = sceKernelLoadModule("KernelProfiler.prx", 0, NULL);
+modid = sceKernelLoadModule("profiler.prx", 0, NULL);
 ret = sceKernelStartModule(modid, 0, NULL, &fd, NULL);
 
 ProfileClear();
