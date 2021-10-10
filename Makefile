@@ -22,7 +22,7 @@ PSP_FW_VERSION=660
 PSPSDK=$(shell psp-config --pspsdk-path)
 include $(PSPSDK)/lib/build.mak
 
-EXTRA_TARGETS = KernelProfiler.S
+EXTRA_TARGETS = profilerLib.S
 
-KernelProfiler.S : $(PRX_EXPORTS)
+profilerLib.S : $(PRX_EXPORTS)
 	psp-build-exports --build-stubs $(PRX_EXPORTS)

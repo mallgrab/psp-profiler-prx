@@ -67,11 +67,11 @@ void ProfileGetRegs(PspDebugProfilerRegs *regs)
 	}
 }
 
-//#define WELCOME_MESSAGE "Profiler loaded\n"
+#define WELCOME_MESSAGE "\n"
 
 int module_start(SceSize args, void *argp)
 {
-//    printf(WELCOME_MESSAGE);
+    printf(WELCOME_MESSAGE);
 	return 0;
 }
 
