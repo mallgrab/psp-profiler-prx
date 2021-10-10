@@ -4,7 +4,7 @@ Move profiler.prx and profilerLib.S to your project.
 In your project's Makefile include profilerLib.o to OBJS
 
 Example:
-```
+```cpp
 SceUID modid;
 PspDebugProfilerRegs regs;
 int ret;
@@ -18,4 +18,4 @@ ProfileEnable();
 ProfileGetRegs(&regs);
 
 printf("D cache miss : %10u", regs.d_miss);
-```cpp
+```
